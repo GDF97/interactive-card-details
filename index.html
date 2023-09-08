@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FrontEndMentor - Interactive Card Details Form</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="src/styles.css" rel="stylesheet" />
+    <script src="src/script.js" defer></script>
+  </head>
+  <body>
+    <main class="container-items">
+      <section class="left-items">
+        <article class="front-card">
+          <img src="images/card-logo.svg" width="100" alt="" />
+          <div class="bottom-card-info">
+            <p id="cardNumber">0000 0000 0000 0000</p>
+            <div>
+              <p id="cardName">Jasen Appleseed</p>
+              <p id="cardDate">00/00</p>
+            </div>
+          </div>
+        </article>
+        <article class="back-card">
+          <p id="cvc">000</p>
+        </article>
+      </section>
+      <section class="right-items">
+        <article>
+          <form class="form">
+            <div class="input-wrapper">
+              <p>Cardholder name</p>
+              <input
+                type="text"
+                name="name"
+                placeholder="e.g. Jane Appleseed"
+                autocomplete="off"
+                id="cardNameInput"
+								maxlength="20"
+              />
+              <p id="errorMessage">Can't be blank</p>
+            </div>
+            <div class="input-wrapper">
+              <p>Card number</p>
+              <input
+                type="text"
+                name="cardnumber"
+                placeholder="e.g. 1234 6678 9123 0000"
+                autocomplete="off"
+                id="cardNumberInput"
+								minlength="16"
+								maxlength="16"
+              />
+              <p id="errorMessage">Wrong format, numbers only</p>
+            </div>
+            <div class="input-wrapper-diff">
+              <div class="input-expdate">
+                <p>Exp. Date (mm/yy)</p>
+                <div>
+                  <input
+                    type="text"
+                    name="month"
+                    placeholder="MM"
+                    autocomplete="off"
+                    id="cardMonthInput"
+										maxlength="2"
+                  />
+                  <input
+                    type="text"
+                    name="year"
+                    placeholder="YY"
+                    autocomplete="off"
+                    id="cardYearInput"
+										maxlength="2"
+                  />
+                  <p id="errorMessage">Can't be blank</p>
+                </div>
+              </div>
+              <div class="cvc">
+                <p>CVC</p>
+                <input
+                  type="text"
+                  name="cvc"
+                  placeholder="e.g. 123"
+                  autocomplete="off"
+                  id="cardCvcInput"
+									maxlength="3"
+                />
+                <p id="errorMessage">Can't be blank</p>
+              </div>
+            </div>
+            <button>Confirm</button>
+          </form>
+					<div class="thanksModal">
+						<h1>Thank you!</h1>
+						<p>We've added your card details</p>
+						<button class="btnDismiss">Continue</button>
+					</div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
